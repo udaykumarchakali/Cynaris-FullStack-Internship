@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Learn web development with HTML, CSS and JavaScript.">
+
+    <title>My Learning Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header class="header">
+        <nav class="navbar" aria-label="Main navigation">
+
+            <h1 class="logo">LearnWeb</h1>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#courses" class="nav-button">Get Started</a>
+
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <h2>Learn Web Development</h2>
+
+                <p>
+                    Build your future with HTML, CSS and JavaScript.
+                    Learn new skills and create amazing projects.
+                </p>
+
+                <a href="#courses" class="hero-button">Explore Courses</a>
+            </div>
+
+        </section>
+
+        <!-- Courses Section -->
+        <section class="courses" id="courses">
+
+            <h2>Our Popular Courses</h2>
+
+            <p class="section-description">
+                Choose a course and start learning today.
+            </p>
+
+            <!-- CSS Grid Container -->
+            <div class="course-grid">
+
+                <article class="course-card">
+                    <div class="course-icon">🌐</div>
+                    <h3>HTML5</h3>
+                    <p>
+                        Learn HTML structure and create
+                        your first web pages.
+                    </p>
+                    <a href="#about" class="card-button">Learn More</a>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon">🎨</div>
+                    <h3>CSS3</h3>
+                    <p>
+                        Learn CSS styling, Flexbox,
+                        Grid and responsive design.
+                    </p>
+                    <a href="#about" class="card-button">Learn More</a>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon">⚡</div>
+                    <h3>JavaScript</h3>
+                    <p>
+                        Learn JavaScript and make
+                        your websites interactive.
+                    </p>
+                    <a href="#about" class="card-button">Learn More</a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h2>Why Choose Us?</h2>
+            <p>
+                We help beginners learn web development
+                through simple lessons and practical projects.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <p>&copy; 2026 LearnWeb. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
