@@ -1,0 +1,171 @@
+
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mobile-first base styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fb;
+}
+
+/* Navbar */
+.header {
+    background-color: #172554;
+    color: white;
+    padding: 1rem 5%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #dbeafe;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    color: #172554;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* About Section */
+.about {
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.about h2,
+.services h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #172554;
+}
+
+/* Services Section */
+.services {
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #2563eb;
+    margin-bottom: 0.8rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 5%;
+}
+
+/* TABLET - 768px */
+@media (min-width: 768px) {
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .hero {
+        padding: 6rem 10%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* DESKTOP - 1200px */
+@media (min-width: 1200px) {
+
+    .navbar {
+        max-width: 75rem;
+        margin: auto;
+    }
+
+    .hero {
+        padding: 7rem 15%;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .about,
+    .services {
+        max-width: 75rem;
+        margin: auto;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
