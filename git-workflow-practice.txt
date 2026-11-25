@@ -1,0 +1,4 @@
+Git Workflow Practice 
+Git branching helps organize development 
+Git rebase helps maintain clean history 
+Git rebase helps maintain clean history 
