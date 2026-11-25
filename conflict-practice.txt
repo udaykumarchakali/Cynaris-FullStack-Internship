@@ -1,1 +1,1 @@
-Content from Branch 1 
+Content from Branch 1 and Branch 2
