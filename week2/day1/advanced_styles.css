@@ -1,0 +1,232 @@
+
+/* 1. CSS Custom Properties */
+:root {
+    --bg-color: #f4f7fb;
+    --text-color: #222222;
+    --card-color: #ffffff;
+    --primary-color: #2563eb;
+    --nav-color: #ffffff;
+}
+
+/* 2. Dark Theme */
+body:has(#theme-toggle:checked) {
+    --bg-color: #121827;
+    --text-color: #ffffff;
+    --card-color: #1f2937;
+    --primary-color: #60a5fa;
+    --nav-color: #1f2937;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* Hide Theme Checkbox */
+#theme-toggle {
+    display: none;
+}
+
+/* 3. Sticky Navigation */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 8%;
+    background-color: var(--nav-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Theme Button */
+.theme-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.primary-btn:hover {
+    transform: scale(1.08);
+}
+
+/* Common Container */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.card {
+    background-color: var(--card-color);
+    padding: 30px;
+    margin: 25px auto;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. CSS Loading Spinner */
+.spinner {
+    width: 55px;
+    height: 55px;
+    border: 6px solid #d1d5db;
+    border-top: 6px solid var(--primary-color);
+    border-radius: 50%;
+    margin: 25px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 5. Animated Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background-color: #d1d5db;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    width: 75%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    animation: progress 2s ease-in-out;
+}
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 75%;
+    }
+}
+
+/* 6. Pseudo Elements */
+.decorated-heading {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.decorated-heading::before {
+    content: "★ ";
+    color: orange;
+}
+
+.decorated-heading::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 8px auto;
+    border-radius: 5px;
+}
+
+.description::before {
+    content: "Tip: ";
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--card-color);
+    margin-top: 50px;
+}
+
+/* 7. Responsive Design */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
